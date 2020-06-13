@@ -63,5 +63,16 @@ public class StringCalculatorTestService {
     assertEquals(12, stringCalculatorservice.Add("//;\n;2000\n3;//9"));
     assertEquals(1194, stringCalculatorservice.Add("1\n1000\n1202\n23\n32\n44\n94"));
   }
+  
+  @Test
+  public void testForhandlingMultipleDelimeters() {
+    StringCalculatorService stringCalculatorservice = new StringCalculatorService();
+    assertEquals(6, stringCalculatorservice.Add("//[***]\\n1***2***3"));
+    assertEquals(13, stringCalculatorservice.Add("//[*]\n10***3"));
+    assertEquals(1194, stringCalculatorservice.Add("1\n1000***1202\n23\n32\n44\n94"));
+  }
+  
+  
+//[***]\n1***2***3
 
 }
