@@ -11,8 +11,7 @@ public class StringCalculatorService {
     }
     for (int i = 0; i <Number.length(); i++) {
       x = Number.charAt(i);
-      System.out.print(x);
-      if (x != ',') {
+      if (x!='\n') {
         s1 = s1 + x;
       } else {
         sum += Integer.parseInt(String.valueOf(s1));
