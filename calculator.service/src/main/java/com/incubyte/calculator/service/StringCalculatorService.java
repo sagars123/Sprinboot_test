@@ -1,6 +1,6 @@
 package com.incubyte.calculator.service;
 
-public class StringCalculatorService {
+public class StringCalculatorService{
 
   public int Add(String Number) {
     int sum = 0;
@@ -15,7 +15,13 @@ public class StringCalculatorService {
       if(i+1<Number.length())
       x1 = Number.charAt(i+1);
       
-     if (x!='\n'&& x!='/' && x!=';' && x!='\\' && x!='n' && x1!='n') {
+     if (x!='\n'&& x!='/' && x!=';' && x!='\\' && x!='n' && x1!='n'&& x!=',')
+     {
+       
+       if(x=='-')
+       {
+          throw new RuntimeException("Negative Not allowed = -"+x1);
+       }
         System.out.print(x);
         s1 = s1 + x;
       } else {
