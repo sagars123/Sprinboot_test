@@ -16,7 +16,7 @@ public class StringCalculatorService {
         x1 = Number.charAt(i + 1);
 
       if (x != '\n' && x != '/' && x != ';' && x != '\\' && x != 'n' && x1 != 'n' && x != ','
-          && x != '*' && x != '[' && x != ']') {
+          && x != '*' && x != '[' && x != ']'  && x != '%') {
 
         if (x == '-') {
           throw new RuntimeException("Negative Not allowed = -" + x1);
