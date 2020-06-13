@@ -25,7 +25,7 @@ public class StringCalculatorService{
         System.out.print(x);
         s1 = s1 + x;
       } else {
-        if(!s1.equals(""))
+        if(s1.equals("1000")||(!s1.equals("") && s1.length()<3))
         sum += Integer.parseInt(String.valueOf(s1));
         s1 = "";
       }
